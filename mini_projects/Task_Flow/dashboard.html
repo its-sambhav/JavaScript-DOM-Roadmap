@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <header>
+        <h1>Task Flow Pro</h1>
+        <div class="datetime">
+            <h3 id="time"></h3>
+            <h3 id="date"></h3>
+        </div>
+    </header>
+    <section class="main" id="main">
+
+        <div class="sidebar">
+            <ul>
+                <li><button class="sidebar_button" type="button" onclick="overview()">Dashboard</button></li>
+                <li><button class="sidebar_button" type="button" onclick="add_task()">Add Task</button></li>
+              
+            </ul>
+        </div>
+
+        <div class="content" id="content">
+
+            <div class="overview" id="overview">
+
+                <div>
+                    <h2 class="welcome-message">Welcome Back, <span id="user_name"></span>!</h2>
+                </div>
+                <div class="task_summary_container">
+                    <div class="task_summary">
+                        <h2 class="task_title">Total Tasks</h2>
+                        <p class="task_count" id="total_tasks">0</p>
+                    </div>
+
+                    <div class="task_summary">
+                        <h2 class="task_title">Completed Tasks</h2>
+                        <p class="task_count" id="completed_tasks">0</p>
+                    </div>
+
+                    <div class="task_summary">
+                        <h2 class="task_title">Pending Tasks</h2>
+                        <p class="task_count" id="pending_tasks">0</p>
+                    </div>
+
+                    <div class="task_summary">
+                        <h2 class="task_title">Past Due Tasks</h2>
+                        <p class="task_count" id="past_due_tasks">0</p>
+                    </div>
+                </div>
+             <div>
+                <table border="1" cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task_table_body">
+                    </tbody>
+                </table>
+             </div>
+            </div>
+
+
+            <div id="addtask" class="addtask">
+                <h2 class="form-title">Add New Task</h2>
+                <form id="task_form">
+                    <div class="form-group">
+                        <label for="task_title">Task Title:</label>
+                        <input type="text" id="task_title" name="task_title" required><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="task_description">Description:</label>
+                        <textarea id="task_description" name="task_description" rows="4" cols="50" required></textarea><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="due_date">Due Date:</label>
+                        <input type="date" id="due_date" name="due_date" required><br><br>
+                    </div>
+                    <button type="button" id="submit_button" onclick="submitTask()">Add Task</button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
