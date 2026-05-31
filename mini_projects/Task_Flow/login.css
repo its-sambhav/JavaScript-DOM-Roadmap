@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-color: #00789C;
+background-color: navy;
 }
 
 section {
@@ -47,7 +47,7 @@ button {
     height: 40px;
     width: 365px;
     border: none;
-    background-color: #00789C;
+    background-color: navy;
     color: white;
 
 }
